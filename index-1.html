@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E.G.T.S - Energy Global Technical Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav ul {
+            list-style: none;
+            background-color: #00509e;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 1em;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #003f7f;
+        }
+        section {
+            padding: 20px;
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+    </style>
+    <script>
+        function showPage(id) {
+            const pages = document.querySelectorAll("section");
+            pages.forEach(page => page.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+        }
+        window.onload = () => showPage('home');
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Energy Global Technical Service (E.G.T.S)</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('about')">About</a></li>
+            <li><a href="#" onclick="showPage('services')">Services</a></li>
+            <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <section id="home" class="active">
+            <h2>Welcome to E.G.T.S</h2>
+            <p>We specialize in calibration of instruments and safety valves, and maintenance in oil, gas, and electricity industries in Algeria.</p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Energy Global Technical Service (E.G.T.S) is committed to providing reliable calibration and maintenance services in Algeria, ensuring optimal performance and safety for our clients.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Calibration of Instruments</li>
+                <li>Calibration of Safety Valves</li>
+                <li>Maintenance for Oil Industry</li>
+                <li>Maintenance for Gas Industry</li>
+                <li>Maintenance for Electricity Sector</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: contact@egts-dz.com</p>
+            <p>Phone: +213 555 123 456</p>
+            <p>Location: Algeria</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Energy Global Technical Service - All rights reserved.</p>
+    </footer>
+</body>
+</html>
